@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 function truncateText(text, maxLength) {
   return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
@@ -6,7 +7,7 @@ function truncateText(text, maxLength) {
 
 export default function BookCard({ book }) {
   return (
-    <div className="card h-100">
+    <div className="card h-100 shadow-sm">
       <img
         src={book.imageUrl}
         className="card-img-top"
@@ -19,9 +20,14 @@ export default function BookCard({ book }) {
         <p className="card-text flex-grow-1" title={book.description}>
           {truncateText(book.description, 50)}
         </p>
-        <a href="#" className="btn btn-primary mt-auto">
-          Read More
-        </a>
+        <div className="d-flex justify-content-between">
+          <Link to="#" className="btn btn-outline-primary">
+            Edit
+          </Link>
+          <Link to="#" className="btn btn-outline-danger">
+            Delete
+          </Link>
+        </div>
       </div>
     </div>
   );
