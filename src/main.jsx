@@ -8,6 +8,8 @@ import BookCard from "./bookcard/BookCard.jsx";
 import Book from "./book/Book.jsx";
 import AddBookForm from "./addbook/AddBookForm.jsx";
 import LoginFom from "./login/LoginFom.jsx";
+import BookDetail from "./bookdetail/BookDetail.jsx";
+import { getBookById } from "./businesslogic/crud.js";
 
 let routes = [
   {
@@ -35,8 +37,19 @@ let routes = [
         element: <AddBookForm />,
       },
       {
+        path: "edit-book/:id",
+        element: <AddBookForm />,
+        loader: async ({ params }) => {
+          return await getBookById(params.id);
+        },
+      },
+      {
         path: "login",
         element: <LoginFom />,
+      },
+      {
+        path: "book/:id",
+        element: <BookDetail />,
       },
     ],
   },
