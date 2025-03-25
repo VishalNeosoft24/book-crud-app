@@ -1,0 +1,116 @@
+{
+    "books": [
+        {
+            "id": "1",
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "description": "A novel about the American Dream and the roaring twenties.",
+            "imageUrl": "https://ritikart.com/cdn/shop/files/1_444dfe1e-846d-49ff-83de-d347a8a13bdf.jpg?v=1699875126"
+        },
+        {
+            "id": "2",
+            "title": "1984",
+            "author": "George Orwell",
+            "description": "A dystopian novel about totalitarianism and surveillance.",
+            "imageUrl": "https://m.media-amazon.com/images/I/715WdnBHqYL._UF1000,1000_QL80_.jpg"
+        },
+        {
+            "id": "3",
+            "title": "To Kill a Mockingbird",
+            "author": "Harper Lee",
+            "description": "A novel about racial injustice in the Deep South.",
+            "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg"
+        },
+        {
+            "id": "4",
+            "title": "Pride and Prejudice",
+            "author": "Jane Austen",
+            "description": "A classic romance novel about love and societal expectations.",
+            "imageUrl": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p468777_b_v10_bo.jpg"
+        },
+        {
+            "id": "5",
+            "title": "Moby Dick",
+            "author": "Herman Melville",
+            "description": "A whaling adventure exploring obsession and revenge.",
+            "imageUrl": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781681779133/moby-dick-9781681779133_hr.jpg"
+        },
+        {
+            "id": "6",
+            "title": "War and Peace",
+            "author": "Leo Tolstoy",
+            "description": "An epic novel set during the Napoleonic Wars.",
+            "imageUrl": "https://m.media-amazon.com/images/I/81W6BFaJJWL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "id": "7",
+            "title": "The Catcher in the Rye",
+            "author": "J.D. Salinger",
+            "description": "A coming-of-age story about teenage rebellion.",
+            "imageUrl": "https://m.media-amazon.com/images/I/8125BDk3l9L.jpg"
+        },
+        {
+            "id": "8",
+            "title": "The Hobbit",
+            "author": "J.R.R. Tolkien",
+            "description": "A fantasy novel about Bilbo Baggins' adventure.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3YDwAp_AIH0qSymQi_etStLfQ0NbpEHC9Xw&s"
+        },
+        {
+            "id": "9",
+            "title": "The Lord of the Rings",
+            "author": "J.R.R. Tolkien",
+            "description": "An epic fantasy trilogy about the battle for Middle-earth.",
+            "imageUrl": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28828_p_v8_ao.jpg"
+        },
+        {
+            "id": "10",
+            "title": "Crime and Punishment",
+            "author": "Fyodor Dostoevsky",
+            "description": "A psychological novel exploring guilt and redemption.",
+            "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSIe-RdIPYFu8T5U0gqO3xE4Bo7mgVipkw1UhpBUpd-PMkaocwIqUEX79hnqW0RjpEFf3BnLQ8beExEiQE6odFxzdJ3yi82Q8i4sIwPPtfD9bCo5jaKkdK-&usqp=CAE"
+        },
+        {
+            "id": "11",
+            "title": "Brave New World",
+            "author": "Aldous Huxley",
+            "description": "A dystopian novel about a future society shaped by science and control.",
+            "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTkDHrM24nrhEcXYy5VJMiaXuhA1nvyPxV4V4Ws_Qd6h2ts4tn1jnRyQf5qm34FCNAvV628CaQlRsZnOe-5yk5B8OLaJiuR-aaXm-LVxps&usqp=CAE"
+        },
+        {
+            "id": "12",
+            "title": "The Odyssey",
+            "author": "Homer",
+            "description": "An ancient Greek epic poem about Odysseus' journey home.",
+            "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRy5jYjSCyrgDhyTKlv21lM1-ILqOpSQNcbyX--9hlrJJXWgySGMq88f3_vcEs2VB9hZ0rkoAbU2bRZsLwJGUFEVPdeXasdI26kdFIq-QcH5ljaesSshDGR&usqp=CAE"
+        },
+        {
+            "id": "13",
+            "title": "The Brothers Karamazov",
+            "author": "Fyodor Dostoevsky",
+            "description": "A philosophical novel exploring faith, doubt, and morality.",
+            "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQHWENvgmBgMAD1_LiRK4UUkXBr5X_nKValeBL86Y6rwlJwC6x2RGrrRCq_ahpAWeq79Qo6ZuTNyDgIP-toymSCm9y3MGFUcl1pEkU7KKRM&usqp=CAE"
+        },
+        {
+            "id": "14",
+            "title": "Don Quixote",
+            "author": "Miguel de Cervantes",
+            "description": "A classic novel about the adventures of an aging knight.",
+            "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRq61eRYekS1JoHHSW2_gVdPZtCAqUDQS6ez5h2c2zJyQ3FZHV2aJSHUYB6wIWFp_bPoxMKD7F-yqnCyS_YeUxketYS3MEW84Tdwc02BD0DcgrNdimmcuf5&usqp=CAE"
+        },
+        {
+            "id": "15",
+            "title": "Frankenstein",
+            "author": "Mary Shelley",
+            "description": "A gothic novel exploring science and its consequences.",
+            "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSJqLzC3U1iaC2ICEx765zSVTHIlDyZaoDkTWSRI-JLYRYL7iaCiAcy72adv3-RNLZOvcBwS-4EOXaY9I93sEE_lHYGec_ykqE7WGRwkENIa6ioDOx1xFSGfQ&usqp=CAE"
+        },
+        {
+            "id": "16",
+            "title": "Dracula",
+            "author": "Bram Stoker",
+            "description": "A horror novel about Count Dracula and his attempt to move to England.",
+            "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRwshGjXIABy2X9r1qDo1vLVEXj2OtQ3Y-t5i76D_AjS4WpHUsMkkCFhdmaoLrN0oZslrb87Simhni2T5SNzjOUM81fTYAFZC3_MbeD4gIP27SG8_P6WP7E&usqp=CAE"
+        }
+    ]
+}
