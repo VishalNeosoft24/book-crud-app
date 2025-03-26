@@ -1,8 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router"; // Ensure the correct import
 import "./Home.css";
+import { useSelector } from "react-redux";
 
 export default function Home() {
+  const bookObject = useSelector((state) => state.bookObj.value);
+
   return (
     <div className="container mt-5">
       {/* Hero Section */}
@@ -35,6 +38,7 @@ export default function Home() {
         <NavLink className="btn btn-custom shadow-sm" to="/books">
           View Books
         </NavLink>
+        <h2 className="mt-4">Total Books : {bookObject.totalBooks}</h2>
       </div>
 
       {/* Features Section */}
