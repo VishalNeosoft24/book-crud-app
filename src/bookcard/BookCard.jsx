@@ -1,4 +1,5 @@
 import React from "react";
+import { useCookies } from "react-cookie";
 import { Link } from "react-router";
 
 function truncateText(text, maxLength) {
@@ -6,11 +7,8 @@ function truncateText(text, maxLength) {
 }
 
 export default function BookCard({ book, bookDelete }) {
-function name(params) {
-  
-}
+  const [cookie, setCookie, removeCookie] = useCookies();
 
-  
   return (
     <div className="card h-100 shadow-sm">
       <img
@@ -30,18 +28,22 @@ function name(params) {
           <Link to={`/book/${book.id}`} className="btn btn-outline-primary">
             Detail
           </Link>
-          <Link
-            to={`/edit-book/${book.id}`}
-            className="btn btn-outline-primary"
-          >
-            Edit
-          </Link>
-          <button
-            className="btn btn-outline-danger"
-            onClick={() => bookDelete(book.id)}
-          >
-            DELETE
-          </button>
+          {cookie.admin != undefined && (
+            <Link
+              to={`/edit-book/${book.id}`}
+              className="btn btn-outline-primary"
+            >
+              Edit
+            </Link>
+          )}
+          {cookie.admin != undefined && (
+            <button
+              className="btn btn-outline-danger"
+              onClick={() => bookDelete(book.id)}
+            >
+              DELETE
+            </button>
+          )}
         </div>
       </div>
     </div>
