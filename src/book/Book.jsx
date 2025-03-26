@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import BookCard from "../bookcard/BookCard";
 import { deleteBook, getAllBooks } from "../businesslogic/crud";
+import { useSelector } from "react-redux";
 
 export default function Book() {
+  const bookObject = useSelector((state) => state.bookObj.value);
+
   const [books, setBooks] = useState([]);
 
   async function getBookData() {
@@ -34,6 +37,7 @@ export default function Book() {
 
   return (
     <div className="container mt-5">
+      <h2 className="mt-4">Total Books : {bookObject.totalBooks}</h2>
       <div className="row g-4">{bookCardArr}</div>
     </div>
   );
