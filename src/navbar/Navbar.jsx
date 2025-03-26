@@ -1,6 +1,14 @@
-import { Link, NavLink } from "react-router";
+import { useCookies } from "react-cookie";
+import { Link, NavLink, useNavigate } from "react-router";
 
 export function Navbar() {
+  const [cookie, setCookie, removeCookie] = useCookies();
+  const navigate = useNavigate();
+
+  function logout() {
+    removeCookie("admin");
+    navigate("login");
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -32,14 +40,23 @@ export function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "nav-link active text-primary" : "nav-link"
-                }
-                to="login"
-              >
-                Login
-              </NavLink>
+              {cookie.admin == undefined && (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active text-primary" : "nav-link"
+                  }
+                  to="login"
+                >
+                  Login
+                </NavLink>
+              )}
+              <li className="nav-item">
+                {cookie.admin != undefined && (
+                  <button onClick={logout} className="nav-link">
+                    Logout
+                  </button>
+                )}
+              </li>
             </li>
 
             <li className="nav-item">
@@ -53,14 +70,16 @@ export function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "nav-link active text-primary" : "nav-link"
-                }
-                to="add-book"
-              >
-                Add New Book
-              </NavLink>
+              {cookie.admin != undefined && (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active text-primary" : "nav-link"
+                  }
+                  to="add-book"
+                >
+                  Add New Book
+                </NavLink>
+              )}
             </li>
           </ul>
           <form className="d-flex" role="search">
