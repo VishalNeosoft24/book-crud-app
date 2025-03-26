@@ -10,6 +10,9 @@ import AddBookForm from "./addbook/AddBookForm.jsx";
 import LoginFom from "./login/LoginFom.jsx";
 import BookDetail from "./bookdetail/BookDetail.jsx";
 import { getBookById } from "./businesslogic/crud.js";
+import { Provider } from "react-redux";
+import { store } from "./reduxstore/store.js";
+import { CookiesProvider } from "react-cookie";
 
 let routes = [
   {
@@ -59,6 +62,10 @@ let browserRouter = createBrowserRouter(routes);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={browserRouter}></RouterProvider>
+    <Provider store={store}>
+      <CookiesProvider>
+        <RouterProvider router={browserRouter}></RouterProvider>
+      </CookiesProvider>
+    </Provider>
   </StrictMode>
 );
