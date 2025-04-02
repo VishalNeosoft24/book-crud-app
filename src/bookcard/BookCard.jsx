@@ -1,6 +1,9 @@
 import React from "react";
 import { useCookies } from "react-cookie";
 import { Link } from "react-router";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { Button, Tooltip } from "@mui/material";
 
 function truncateText(text, maxLength) {
   return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
@@ -29,20 +32,23 @@ export default function BookCard({ book, bookDelete }) {
             Detail
           </Link>
           {cookie.admin != undefined && (
-            <Link
+            <Button
+              LinkComponent={Link}
               to={`/edit-book/${book.id}`}
               className="btn btn-outline-primary"
             >
-              Edit
-            </Link>
+              <Tooltip placement="bottom" title="This button is used fro Edit">
+                <EditIcon color="primary"></EditIcon>
+              </Tooltip>
+            </Button>
           )}
           {cookie.admin != undefined && (
-            <button
+            <Button
               className="btn btn-outline-danger"
               onClick={() => bookDelete(book.id)}
             >
-              DELETE
-            </button>
+              <DeleteIcon color="error"></DeleteIcon>
+            </Button>
           )}
         </div>
       </div>
