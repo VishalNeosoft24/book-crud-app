@@ -13,6 +13,12 @@ import { getBookById } from "./businesslogic/crud.js";
 import { Provider } from "react-redux";
 import { store } from "./reduxstore/store.js";
 import { CookiesProvider } from "react-cookie";
+import RouteGuard from "./routeguard/RouteGuard.jsx";
+
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 let routes = [
   {
@@ -37,11 +43,19 @@ let routes = [
       },
       {
         path: "add-book",
-        element: <AddBookForm />,
+        element: (
+          <RouteGuard>
+            <AddBookForm />
+          </RouteGuard>
+        ),
       },
       {
         path: "edit-book/:id",
-        element: <AddBookForm />,
+        element: (
+          <RouteGuard>
+            <AddBookForm />
+          </RouteGuard>
+        ),
         loader: async ({ params }) => {
           return await getBookById(params.id);
         },
