@@ -2,9 +2,11 @@ import React from "react";
 import { NavLink } from "react-router"; // Ensure the correct import
 import "./Home.css";
 import { useSelector } from "react-redux";
+import { useCookies } from "react-cookie";
 
 export default function Home() {
   const bookObject = useSelector((state) => state.bookObj.value);
+  const [cookie, setCookie, removeCookie] = useCookies();
 
   return (
     <div className="container mt-5">
@@ -42,53 +44,63 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="row mt-5 g-4">
-        {/* Add Book Card */}
-        <div className="col-lg-4 col-md-6">
-          <div className="card shadow-lg border-0 rounded-4">
-            <div className="card-body text-center">
-              <h5 className="card-title fw-bold">📚 Add Books</h5>
-              <p className="card-text text-muted">
-                Easily add new books to your collection.
-              </p>
-              <NavLink
-                to="/add-book"
-                className="btn btn-primary btn-sm shadow-sm"
-              >
-                Add Book
-              </NavLink>
+      {cookie.admin != undefined && (
+        <div className="row mt-5 g-4">
+          {/* Add Book Card */}
+          <div className="col-lg-4 col-md-6">
+            <div className="card shadow-lg border-0 rounded-4">
+              <div className="card-body text-center">
+                <h5 className="card-title fw-bold">📚 Add Books</h5>
+                <p className="card-text text-muted">
+                  Easily add new books to your collection.
+                </p>
+                <NavLink
+                  to="/add-book"
+                  className="btn btn-primary btn-sm shadow-sm"
+                >
+                  Add Book
+                </NavLink>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Update Book Card */}
-        <div className="col-lg-4 col-md-6">
-          <div className="card shadow-lg border-0 rounded-4">
-            <div className="card-body text-center">
-              <h5 className="card-title fw-bold">✏️ Update Books</h5>
-              <p className="card-text text-muted">Edit book details anytime.</p>
-              <NavLink to="/books" className="btn btn-warning btn-sm shadow-sm">
-                Update
-              </NavLink>
+          {/* Update Book Card */}
+          <div className="col-lg-4 col-md-6">
+            <div className="card shadow-lg border-0 rounded-4">
+              <div className="card-body text-center">
+                <h5 className="card-title fw-bold">✏️ Update Books</h5>
+                <p className="card-text text-muted">
+                  Edit book details anytime.
+                </p>
+                <NavLink
+                  to="/books"
+                  className="btn btn-warning btn-sm shadow-sm"
+                >
+                  Update
+                </NavLink>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Delete Book Card */}
-        <div className="col-lg-4 col-md-6 mx-auto">
-          <div className="card shadow-lg border-0 rounded-4">
-            <div className="card-body text-center">
-              <h5 className="card-title fw-bold">🗑️ Delete Books</h5>
-              <p className="card-text text-muted">
-                Remove books from the collection.
-              </p>
-              <NavLink to="/books" className="btn btn-danger btn-sm shadow-sm">
-                Delete
-              </NavLink>
+          {/* Delete Book Card */}
+          <div className="col-lg-4 col-md-6 mx-auto">
+            <div className="card shadow-lg border-0 rounded-4">
+              <div className="card-body text-center">
+                <h5 className="card-title fw-bold">🗑️ Delete Books</h5>
+                <p className="card-text text-muted">
+                  Remove books from the collection.
+                </p>
+                <NavLink
+                  to="/books"
+                  className="btn btn-danger btn-sm shadow-sm"
+                >
+                  Delete
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
